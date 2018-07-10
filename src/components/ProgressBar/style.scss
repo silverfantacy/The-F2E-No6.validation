@@ -1,0 +1,119 @@
+@import '../../assets/style/utils';
+.progressBar {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 64px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 258px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-top: 2px solid $secondary;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% / 3 * 0);
+      border-top: 2px solid $primary;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+    &.progressBar-1 {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% / 3 * 1);
+        border-top: 2px solid $primary;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+    &.progressBar-2 {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% / 3 * 2);
+        border-top: 2px solid $primary;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+    &.progressBar-3 {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% / 3 * 3);
+        border-top: 2px solid $primary;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+  }
+  .progressPoint {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: $primary;
+  }
+  .progressPoint-check {
+    text-align: center;
+    line-height: 12px;
+    >i {
+      color: $light;
+    }
+  }
+  .progressPoint-focus {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      background: $primary;
+      border-radius: 50%;
+      border: 2px solid $light;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    >i {
+      display: none;
+    }
+  }
+  .progressPoint-normal {
+    position: relative;
+    background: $secondary;
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: $light;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    >i {
+      display: none;
+    }
+  }
+}
