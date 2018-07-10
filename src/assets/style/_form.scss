@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  @include font(20px);
+  font-weight: 500;
+  width: 100%;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  label {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+  input {
+    box-sizing: border-box;
+    height: 52px;
+    padding: 0 rhythm(2);
+    border: 2px solid $dark;
+    border-radius: 8px;
+    font-weight: 500;
+    &:focus {
+      outline: none;
+      border: 2px solid $primary;
+    }
+  }
+  .btn {
+    background: #BEE1FF;
+    border: 2px solid #BEE1FF;
+    border-radius: 8px;
+  }
+}

@@ -2,7 +2,7 @@
 @import 'transition';
 @import 'utils';
 html {
-  color: $primary;
+  color: $dark;
   background-color: $light;
   font-family: 'Roboto';
 }
@@ -14,3 +14,5 @@ html {
   flex-direction: column;
   align-items: center;
 }
+
+@import 'form';
