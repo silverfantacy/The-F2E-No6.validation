@@ -1,3 +1,86 @@
 <div class="paymentMethod">
-  PaymentMethod
+  <ProgressBar/>
+  <h1>Payment Method</h1>
+  <h3>Add your credit card infomation!</h3>
+  <form action="">
+    <div class="form-group">
+      <label for="inputCardNumber">Card Number<i class="fab fa-cc-visa"></i></label>
+      <input type="phone"
+             class="form-control"
+             id="inputCardNumber"
+             placeholder="1234 5678 9012 3456"
+             maxlength="16"
+             name="Card Number"
+             onkeyup="value=value.replace(/[^\d]/g,'')"
+             required>
+    </div>
+    <div class="form-row form-row-2">
+      <div class="form-group">
+        <label for="inputName">Cardholder Name</label>
+        <input type="text"
+               class="form-control"
+               id="inputCardholderName"
+               placeholder="EXAMPLE NAME"
+               name="Cardholder Name"
+               required>
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Bank Name</label>
+        <input type="text"
+               class="form-control"
+               id="inputBankName"
+               placeholder="EXAMPLE BANK"
+               name="Bank Name"
+               required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group form-row-3-1">
+        <label for="inputCVV">CVV</label>
+        <input type="phone"
+               class="form-control"
+               id="inputCVV"
+               placeholder="123"
+               maxlength="3"
+               name="CVV"
+               onkeyup="value=value.replace(/[^\d]/g,'')"
+               required>
+      </div>
+      <div class="form-group form-row-3-2">
+        <label for="inputExpireDate">Expire Date</label>
+        <div class="form-row form-row-2">
+          <input type="number"
+                 class="form-control"
+                 id="inputExpireDate"
+                 min="1"
+                 max="12"
+                 placeholder="MM"
+                 name="Expire Date Month"
+                 onkeyup="value=value.replace(/[^\d]/g,'')"
+                 maxlength="2"
+                 required>
+          <input type="number"
+                 class="form-control"
+                 id="inputBirthDate-D"
+                 min="1"
+                 max="31"
+                 placeholder="DD"
+                 name="Birth Date Day"
+                 onkeyup="value=value.replace(/[^\d]/g,'')"
+                 maxlength="2"
+                 required>
+        </div>
+      </div>
+    </div>
+
+    <router-link :to="'/congratulations'"
+                 replace>
+      <!-- <button type="submit"
+              class="btn btn-primary"
+              disabled>SUBMIT & NEXT</button> -->
+      <button type="submit"
+              class="btn btn-primary">SUBMIT & NEXT</button>
+    </router-link>
+  </form>
 </div>

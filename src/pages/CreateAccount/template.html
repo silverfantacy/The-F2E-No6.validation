@@ -8,11 +8,9 @@
       <input type="email"
              class="form-control"
              id="inputAccount"
-             aria-describedby="emailHelp"
              placeholder="example@email.com"
+             name="Account"
              required>
-      <!-- <small id="emailHelp"
-             class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
     <div class="form-group">
       <label for="inputPassword">Password</label>
@@ -20,6 +18,7 @@
              class="form-control"
              id="inputPassword"
              placeholder="●●●●●●●●"
+             name="Password"
              required>
     </div>
     <div class="form-group">
@@ -28,9 +27,16 @@
              class="form-control"
              id="inputComfirmPassword"
              placeholder="●●●●●●●●"
+             name="Comfirm Password"
              required>
     </div>
-    <button type="submit"
+    <router-link :to="'/general_infomation'"
+                 replace>
+      <!-- <button type="submit"
+              class="btn btn-primary"
+              disabled>SUBMIT & NEXT</button> -->
+      <button type="submit"
             class="btn btn-primary">SUBMIT & NEXT</button>
+    </router-link>
   </form>
 </div>

@@ -4,6 +4,12 @@ form {
   @include font(20px);
   font-weight: 500;
   width: 100%;
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .form-group {
     display: flex;
     flex-direction: column;
@@ -12,6 +18,7 @@ form {
   label {
     font-size: 20px;
     letter-spacing: 0;
+    margin-bottom: 4px;
   }
   input {
     box-sizing: border-box;
@@ -20,14 +27,54 @@ form {
     border: 2px solid $dark;
     border-radius: 8px;
     font-weight: 500;
+    transition: all .5s;
     &:focus {
       outline: none;
       border: 2px solid $primary;
     }
   }
+  a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+  }
   .btn {
-    background: #BEE1FF;
-    border: 2px solid #BEE1FF;
+    background: $primary;
+    border: 2px solid $primary;
     border-radius: 8px;
+    height: 52px;
+    font-weight: 400;
+    color: $light;
+    cursor: pointer;
+    transition: all .5s;
+    &:disabled {
+      background: $secondary;
+      border: 2px solid $secondary;
+      cursor: not-allowed;
+    }
+    &:focus,
+    &:hover {
+      outline: none;
+      box-shadow: 0px 2px 1px adjust-color($color: $dark, $lightness: 30%);
+    }
+    &:active {
+      outline: none;
+      border-radius: 8px;
+      box-shadow: 0px 0px 1px adjust-color($color: $dark, $lightness: 30%);
+    }
+  }
+}
+
+.form-row-2 {
+  >* {
+    width: calc((100% - #{rhythm(2)})/2);
+  }
+  margin-bottom: 24px;
+}
+
+.form-row-3 {
+  >* {
+    width: calc((100% - #{rhythm(4)})/3);
   }
 }

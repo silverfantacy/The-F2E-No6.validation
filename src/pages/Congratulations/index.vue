@@ -1,6 +1,10 @@
 <script>
+import ProgressBar from '@/components/ProgressBar'
 export default {
-  name: 'congratulations'
+  name: 'congratulations',
+  components: {
+    ProgressBar
+  }
 }
 </script>
 

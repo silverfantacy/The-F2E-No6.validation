@@ -1,3 +1,90 @@
 <div class="generalInfomation">
-  GeneralInfomation
+  <ProgressBar/>
+  <h1>General Infomation</h1>
+  <h3>Tell us who you are!</h3>
+  <form action="">
+    <div class="form-row form-row-2">
+      <div class="form-group">
+        <label for="inputName">Name<small>(optional)</small></label>
+        <input type="text"
+               class="form-control"
+               id="inputName"
+               placeholder="Example Name"
+               name="Name"
+               required>
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Phone*</label>
+        <input type="phone"
+               class="form-control"
+               id="inputPhone"
+               placeholder="0912 345 678"
+               name="Phone"
+               required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputBirthDate">Birth Date<small>(optional)</small></label>
+      <div class="form-row form-row-3">
+        <input type="number"
+               class="form-control"
+               id="inputBirthDate"
+               min="1950"
+               max="2018"
+               placeholder="YY"
+               name="Birth Date Year"
+               maxlength="4"
+               required>
+        <input type="number"
+               class="form-control"
+               id="inputBirthDate-M"
+               min="1"
+               max="12"
+               placeholder="MM"
+               name="Birth Date Month"
+               maxlength="2"
+               required>
+        <input type="number"
+               class="form-control"
+               id="inputBirthDate-D"
+               min="1"
+               max="31"
+               placeholder="DD"
+               name="Birth Date Day"
+               maxlength="2"
+               required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address*</label>
+      <div class="form-row form-row-2">
+        <input type="text"
+               class="form-control"
+               id="inputAddress"
+               placeholder="City"
+               name="Address City"
+               required>
+        <input type="text"
+               class="form-control"
+               id="inputAddress-Dist"
+               placeholder="Dist"
+               name="Address Dist"
+               required>
+      </div>
+      <input type="text"
+             class="form-control"
+             id="inputAddress-AddressDetail"
+             placeholder="Address Detail"
+             name="Address Detail"
+             required>
+    </div>
+    <router-link :to="'/update_profile_picture'"
+                 replace>
+      <!-- <button type="submit"
+              class="btn btn-primary"
+              disabled>SUBMIT & NEXT</button> -->
+      <button type="submit"
+              class="btn btn-primary">SUBMIT & NEXT</button>
+    </router-link>
+  </form>
 </div>

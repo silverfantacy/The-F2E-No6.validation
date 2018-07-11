@@ -1,3 +1,29 @@
-.paymentMethod{
-  
+@import '../../assets/style/utils';
+.paymentMethod {
+  label {
+    position: relative;
+    .fab.fa-cc-visa {
+      position: absolute;
+      right: rhythm(2);
+      top: calc(34px + 52px - (52px / 2));
+      transform: translateY(-50%);
+      color: $gray;
+    }
+  }
+  span {
+    &::after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\F1F0';
+    }
+  }
+  .form-row-2 {
+    margin-bottom: 0;
+  }
+  .form-row-3-1 {
+    width: calc((100% - #{rhythm(4)}) / 3 * 1);
+  }
+  .form-row-3-2 {
+    width: calc((100% - #{rhythm(4)}) / 3 * 2 + #{rhythm(2)});
+  }
 }

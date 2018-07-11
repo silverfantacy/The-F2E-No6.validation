@@ -1,3 +1,27 @@
 <div class="updateProfilePicture">
-  UpdateProfilePicture
+  <ProgressBar/>
+  <h1>Update Profile Picture</h1>
+  <h3>We wanna know you more!</h3>
+  <form action="">
+    <label for="inputProfilePicture">
+      <i class="fas fa-images"></i>
+      <div class="picture-info">
+        <div>UPLOAD UP TO 3 PHOTOS</div>
+        <div>SIZE: 150*150px</div>
+      </div>
+    </label>
+    <input type="file"
+           id="inputProfilePicture"
+           name="Profile Picture"
+           accept="image/*"
+           required/>
+    <router-link :to="'/payment_method'"
+                 replace>
+      <!-- <button type="submit"
+              class="btn btn-primary"
+              disabled>SUBMIT & NEXT</button> -->
+      <button type="submit"
+              class="btn btn-primary">SUBMIT & NEXT</button>
+    </router-link>
+  </form>
 </div>

@@ -1,3 +1,28 @@
-.updateProfilePicture{
-  
+@import '../../assets/style/utils';
+.updateProfilePicture {
+  #inputProfilePicture {
+    display: none;
+  }
+  label {
+    box-sizing: border-box;
+    width: rhythm(46);
+    height: rhythm(14);
+    padding: 0 rhythm(2);
+    margin-bottom: 24px;
+    border: 2px solid $dark;
+    border-radius: 8px;
+    font-weight: 400;
+    transition: all 0.5s;
+    color: $gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .fa-images {
+      font-size: 45px;
+    }
+    .picture-info {
+      margin-left: rhythm(2);
+    }
+  }
 }
