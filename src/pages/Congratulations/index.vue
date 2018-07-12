@@ -4,6 +4,11 @@ export default {
   name: 'congratulations',
   components: {
     ProgressBar
+  },
+  mounted() {
+    setTimeout(() => {
+      this.$router.push({ path: '/create_account' })
+    }, 5000)
   }
 }
 </script>
