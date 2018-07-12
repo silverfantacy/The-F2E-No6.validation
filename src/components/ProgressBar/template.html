@@ -1,15 +1,16 @@
 <div class="progressBar">
-  <ul class="progressBar-1">
-    <li class="progressPoint progressPoint-check">
+  <ul class="progressBar000" :class="progressLine">
+    <!-- <ul class="progressBar"  :class="progressLine"> -->
+    <li class="progressPoint" :class="progressCheck1">
       <i class="fas fa-check fa-xs"></i>
     </li>
-    <li class="progressPoint progressPoint-focus">
+    <li class="progressPoint" :class="progressCheck2">
       <i class="fas fa-check fa-xs" ></i>
     </li>
-    <li class="progressPoint progressPoint-normal">
+    <li class="progressPoint" :class="progressCheck3">
       <i class="fas fa-check fa-xs" ></i>
     </li>
-    <li class="progressPoint progressPoint-normal">
+    <li class="progressPoint" :class="progressCheck4">
       <i class="fas fa-check fa-xs" ></i>
     </li>
   </ul>

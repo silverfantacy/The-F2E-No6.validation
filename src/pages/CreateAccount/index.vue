@@ -4,6 +4,11 @@ export default {
   name: 'createAccount',
   components: {
     ProgressBar
+  },
+  data() {
+    return {
+      progressline: 0
+    }
   }
 }
 </script>

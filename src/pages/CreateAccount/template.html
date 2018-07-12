@@ -1,4 +1,4 @@
-<div class="createAccount">
+<div class="createAccount" :progress="0">
   <ProgressBar/>
   <h1>Create Account</h1>
   <h3>Glad to see you here!</h3>
@@ -30,7 +30,7 @@
              name="Comfirm Password"
              required>
     </div>
-    <router-link :to="'/general_infomation'"
+    <router-link :to="'/general_infomation'" tage="button"
                  replace>
       <!-- <button type="submit"
               class="btn btn-primary"
