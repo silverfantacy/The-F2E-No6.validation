@@ -1,14 +1,11 @@
 <script>
 import ProgressBar from '@/components/ProgressBar'
+import NextButton from '@/components/NextButton'
 export default {
   name: 'createAccount',
   components: {
-    ProgressBar
-  },
-  data() {
-    return {
-      progressline: 0
-    }
+    ProgressBar,
+    NextButton
   }
 }
 </script>

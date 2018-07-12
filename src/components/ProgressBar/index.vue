@@ -1,11 +1,6 @@
 <script>
 export default {
   name: 'progressBar',
-  data() {
-    return {
-      progress: null
-    }
-  },
   computed: {
     progressLine() {
       // console.log(this.$route.path)

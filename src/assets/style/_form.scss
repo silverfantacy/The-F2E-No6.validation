@@ -39,31 +39,6 @@ form {
     width: 100%;
     text-decoration: none;
   }
-  .btn {
-    background: $primary;
-    border: 2px solid $primary;
-    border-radius: 8px;
-    height: 52px;
-    font-weight: 400;
-    color: $light;
-    cursor: pointer;
-    transition: all .5s;
-    &:disabled {
-      background: $secondary;
-      border: 2px solid $secondary;
-      cursor: not-allowed;
-    }
-    &:focus,
-    &:hover {
-      outline: none;
-      box-shadow: 0px 2px 1px adjust-color($color: $dark, $lightness: 30%);
-    }
-    &:active {
-      outline: none;
-      border-radius: 8px;
-      box-shadow: 0px 0px 1px adjust-color($color: $dark, $lightness: 30%);
-    }
-  }
 }
 
 .form-row-2 {
